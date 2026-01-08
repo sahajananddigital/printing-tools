@@ -2,9 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Files, ArrowRight } from 'lucide-react';
 
+import SEO from '../components/SEO';
+
 const Home = () => {
     return (
         <div className="max-w-4xl mx-auto">
+            <SEO
+                title="Home"
+                description="Free online printing tools. Crop and duplicate invoices, merge PDFs, and more. Client-side only for maximum privacy."
+                keywords="invoice duplicator, printing tools, pdf crop, a4 duplicate"
+            />
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Available Tools</h1>
             <p className="text-gray-600 mb-8">Select a tool to get started.</p>
 

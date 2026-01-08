@@ -1,16 +1,49 @@
-# React + Vite
+# Printing Tools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A collection of client-side utility tools for printing and PDF manipulation.
 
-Currently, two official plugins are available:
+## Tools
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Invoice Duplicator
+A tool designed to duplicate half-page invoices (A5) onto a single A4 sheet to save paper.
 
-## React Compiler
+**Features:**
+- **Strict A4 Output**: Automatically scales and positions content onto a standard A4 page.
+- **Adjustable Split**: "Cut Position" slider allows you to crop empty space from the bottom of the invoice to ensure a perfect fit.
+- **Client-Side Only**: All processing happens in your browser using `pdf-lib`. No files are ever uploaded to a server.
+- **Distortion-Free**: Uses advanced masking techniques to duplicate content without stretching or squeezing.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
+- **Framework**: React + Vite
+- **Styling**: Tailwind CSS v4
+- **PDF Processing**: pdf-lib
+- **Testing**: Vitest
+- **Routing**: React Router (HashRouter)
 
-## Expanding the ESLint configuration
+## Local Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Start dev server:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Run tests:**
+   ```bash
+   npm run test
+   ```
+
+## Deployment
+
+The project is configured to deploy to **GitHub Pages**.
+
+1. **Push changes to main branch.**
+2. **Run deployment script:**
+   ```bash
+   npm run deploy
+   ```
+   This will build the project and push the `dist` folder to the `gh-pages` branch.

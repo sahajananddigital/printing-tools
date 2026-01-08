@@ -3,20 +3,16 @@ import { ArrowLeft, Download, RefreshCw, FileCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import DropZone from '../../components/ui/DropZone';
 import { duplicateInvoice } from '../../utils/pdfProcessor';
+import SEO from '../../components/SEO';
 
 const InvoiceDuplicator = () => {
     const [file, setFile] = useState(null);
     const [isProcessing, setIsProcessing] = useState(false);
     const [processedPdfUrl, setProcessedPdfUrl] = useState(null);
     const [error, setError] = useState(null);
-
     const [splitPercentage, setSplitPercentage] = useState(50);
 
     const handleFileSelect = async (selectedFile) => {
-        // If we have a file already and user just changes slider, we might want to re-process?
-        // For now, let's keep the flow simple: Upload -> Process.
-        // But better: Store file in state, and have a "Process" button or auto-process when slider changes?
-        // Let's autoset the file then call process.
         setFile(selectedFile);
         processFile(selectedFile, splitPercentage);
     };
@@ -62,6 +58,12 @@ const InvoiceDuplicator = () => {
 
     return (
         <div className="max-w-4xl mx-auto">
+            <SEO
+                title="Invoice Duplicator - Printing Tools"
+                description="Easily crop and duplicate your A4/A5 invoices onto a single A4 sheet. Save paper and printing costs with this free tool."
+                keywords="invoice cropper, pdf duplicate, a4 printing, save paper, invoice tool"
+                url="/invoice-duplicator"
+            />
             <div className="mb-8">
                 <Link to="/" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-4 transition-colors">
                     <ArrowLeft className="w-4 h-4 mr-2" />
