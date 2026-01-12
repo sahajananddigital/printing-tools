@@ -4,6 +4,7 @@ import Layout from './layouts/Layout';
 import Home from './pages/Home';
 import InvoiceDuplicator from './tools/InvoiceDuplicator/InvoiceDuplicator';
 import PdfMerge from './tools/PdfMerge/PdfMerge';
+import PdfSign from './tools/PdfSign/PdfSign';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/invoice-duplicator" element={<InvoiceDuplicator />} />
             <Route path="/pdf-merge" element={<PdfMerge />} />
+            <Route path="/pdf-sign" element={<PdfSign />} />
           </Routes>
         </Layout>
       </div>

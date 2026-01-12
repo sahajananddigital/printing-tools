@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Files, ArrowRight } from 'lucide-react';
+import { Files, ArrowRight, Pen } from 'lucide-react';
 
 import SEO from '../components/SEO';
 
@@ -45,6 +45,22 @@ const Home = () => {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Merge PDFs</h3>
                     <p className="text-gray-600 text-sm">
                         Combine multiple PDF files into a single document. Fast, secure, and client-side only.
+                    </p>
+                </Link>
+
+                <Link
+                    to="/pdf-sign"
+                    className="block p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all group"
+                >
+                    <div className="flex items-start justify-between mb-4">
+                        <div className="p-3 bg-green-50 rounded-lg text-green-600 group-hover:bg-green-100 transition-colors">
+                            <Pen className="w-6 h-6" />
+                        </div>
+                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">E-Sign PDF</h3>
+                    <p className="text-gray-600 text-sm">
+                        Sign your PDF documents. Draw, type, or upload your signature.
                     </p>
                 </Link>
             </div>
