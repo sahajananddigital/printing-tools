@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { Home, Printer } from 'lucide-react';
 
-const Layout = () => {
+const Layout = ({ children }) => {
     return (
         <div className="min-h-screen flex flex-col">
             <header className="bg-white shadow-sm border-b border-gray-200">
@@ -20,7 +20,7 @@ const Layout = () => {
             </header>
 
             <main className="flex-1 container mx-auto px-4 py-8">
-                <Outlet />
+                {children || <Outlet />}
             </main>
 
             <footer className="bg-gray-50 border-t border-gray-200 py-6">

@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 
-const DropZone = ({ onFileSelect }) => {
+const DropZone = ({ onFileSelect, multiple = false }) => {
     const [isDragOver, setIsDragOver] = useState(false);
 
     const handleDragOver = useCallback((e) => {
@@ -17,21 +17,39 @@ const DropZone = ({ onFileSelect }) => {
         e.preventDefault();
         setIsDragOver(false);
 
-        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-            const file = e.dataTransfer.files[0];
-            if (file.type === 'application/pdf') {
-                onFileSelect(file);
+        if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+            if (multiple) {
+                // Filter for PDFs
+                const pdfFiles = Array.from(e.dataTransfer.files).filter(f => f.type === 'application/pdf');
+                if (pdfFiles.length > 0) {
+                    onFileSelect(pdfFiles);
+                } else {
+                    alert('Please upload PDF files.');
+                }
             } else {
-                alert('Please upload a PDF file.');
+                // Single file mode
+                const file = e.dataTransfer.files[0];
+                if (file.type === 'application/pdf') {
+                    onFileSelect(file);
+                } else {
+                    alert('Please upload a PDF file.');
+                }
             }
         }
-    }, [onFileSelect]);
+    }, [onFileSelect, multiple]);
 
     const handleFileInput = useCallback((e) => {
-        if (e.target.files && e.target.files[0]) {
-            onFileSelect(e.target.files[0]);
+        if (e.target.files && e.target.files.length > 0) {
+            if (multiple) {
+                const pdfFiles = Array.from(e.target.files).filter(f => f.type === 'application/pdf');
+                if (pdfFiles.length > 0) {
+                    onFileSelect(pdfFiles);
+                }
+            } else {
+                onFileSelect(e.target.files[0]);
+            }
         }
-    }, [onFileSelect]);
+    }, [onFileSelect, multiple]);
 
     return (
         <div
@@ -49,6 +67,7 @@ const DropZone = ({ onFileSelect }) => {
             <input
                 type="file"
                 accept="application/pdf"
+                multiple={multiple}
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                 onChange={handleFileInput}
             />
@@ -61,7 +80,7 @@ const DropZone = ({ onFileSelect }) => {
                 </div>
                 <div>
                     <h3 className="text-lg font-semibold text-gray-900">
-                        Click to upload or drag and drop
+                        {multiple ? "Click to upload multiple files or drag and drop" : "Click to upload or drag and drop"}
                     </h3>
                     <p className="text-gray-500 mt-1">
                         Only PDF files are supported
