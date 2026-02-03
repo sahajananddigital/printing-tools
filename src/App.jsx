@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import InvoiceDuplicator from './tools/InvoiceDuplicator/InvoiceDuplicator';
 import PdfMerge from './tools/PdfMerge/PdfMerge';
 import PdfSign from './tools/PdfSign/PdfSign';
+import ImageToPdf from './tools/ImageToPdf/ImageToPdf';
+import Docs from './pages/Docs';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
             <Route path="/invoice-duplicator" element={<InvoiceDuplicator />} />
             <Route path="/pdf-merge" element={<PdfMerge />} />
             <Route path="/pdf-sign" element={<PdfSign />} />
+            <Route path="/image-to-pdf" element={<ImageToPdf />} />
+            <Route path="/docs" element={<Docs />} />
           </Routes>
         </Layout>
       </div>

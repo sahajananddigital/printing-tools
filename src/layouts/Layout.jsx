@@ -15,6 +15,9 @@ const Layout = ({ children }) => {
                         <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
                             Home
                         </Link>
+                        <Link to="/docs" className="ml-6 text-gray-600 hover:text-blue-600 transition-colors">
+                            Docs
+                        </Link>
                     </nav>
                 </div>
             </header>
