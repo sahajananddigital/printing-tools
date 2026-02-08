@@ -6,6 +6,7 @@ import InvoiceDuplicator from './tools/InvoiceDuplicator/InvoiceDuplicator';
 import PdfMerge from './tools/PdfMerge/PdfMerge';
 import PdfSign from './tools/PdfSign/PdfSign';
 import ImageToPdf from './tools/ImageToPdf/ImageToPdf';
+import TextExtractor from './tools/TextExtractor/TextExtractor';
 import Docs from './pages/Docs';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/pdf-merge" element={<PdfMerge />} />
             <Route path="/pdf-sign" element={<PdfSign />} />
             <Route path="/image-to-pdf" element={<ImageToPdf />} />
+            <Route path="/text-extractor" element={<TextExtractor />} />
             <Route path="/docs" element={<Docs />} />
           </Routes>
         </Layout>

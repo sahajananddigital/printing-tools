@@ -82,6 +82,7 @@ const DropZone = ({ onFileSelect, multiple = false, accept = "application/pdf" }
     const getHelperText = () => {
         if (accept === 'application/pdf') return "Only PDF files are supported";
         if (accept === 'image/*') return "Supported formats: JPG, PNG";
+        if (accept === 'image/*,application/pdf') return "Supported formats: JPG, PNG, PDF";
         return `Supported formats: ${accept}`;
     };
 

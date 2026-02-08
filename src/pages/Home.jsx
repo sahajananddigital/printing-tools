@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Files, ArrowRight, Pen, Image as ImageIcon } from 'lucide-react';
+import { Files, ArrowRight, Pen, Image as ImageIcon, ScanText } from 'lucide-react';
 
 import SEO from '../components/SEO';
 
@@ -77,6 +77,22 @@ const Home = () => {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Image to PDF</h3>
                     <p className="text-gray-600 text-sm">
                         Convert images to PDF. Support for JPG and PNG.
+                    </p>
+                </Link>
+
+                <Link
+                    to="/text-extractor"
+                    className="block p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all group"
+                >
+                    <div className="flex items-start justify-between mb-4">
+                        <div className="p-3 bg-teal-50 rounded-lg text-teal-600 group-hover:bg-teal-100 transition-colors">
+                            <ScanText className="w-6 h-6" />
+                        </div>
+                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Text Extractor (OCR)</h3>
+                    <p className="text-gray-600 text-sm">
+                        Extract text from images and PDFs. Perfect for cheques, receipts, and documents.
                     </p>
                 </Link>
             </div>

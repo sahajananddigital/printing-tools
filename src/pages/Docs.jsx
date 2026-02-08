@@ -68,6 +68,34 @@ const Docs = () => {
                     </ul>
                 </section>
 
+                <section className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                    <h2 className="text-xl font-bold text-gray-900 mb-4">Text Extractor (OCR)</h2>
+                    <p className="text-gray-600 mb-4">
+                        Extract text from images and PDF documents using OCR (Optical Character Recognition). Perfect for digitizing cancelled cheques, receipts, invoices, and scanned documents.
+                    </p>
+                    <h3 className="font-semibold text-gray-900 mb-2">How to use:</h3>
+                    <ul className="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Upload an image (JPG, PNG) or PDF file.</li>
+                        <li>Click "Extract Text" to start OCR processing.</li>
+                        <li>View the extracted text in the text area.</li>
+                        <li>Copy to clipboard or download as a .txt file.</li>
+                    </ul>
+                    <h3 className="font-semibold text-gray-900 mt-4 mb-2">Best Practices:</h3>
+                    <ul className="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Use high-resolution images for better accuracy.</li>
+                        <li>Ensure good lighting and contrast in photos.</li>
+                        <li>Works best with printed text; handwriting may vary.</li>
+                        <li>Straighten tilted documents before uploading.</li>
+                    </ul>
+                    <h3 className="font-semibold text-gray-900 mt-4 mb-2">Use Cases:</h3>
+                    <ul className="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Extract bank details from cancelled cheques (IFSC, Account Number).</li>
+                        <li>Digitize receipts and invoices for record-keeping.</li>
+                        <li>Convert scanned documents to editable text.</li>
+                        <li>Extract text from screenshots and photos.</li>
+                    </ul>
+                </section>
+
                 <section className="mt-8 p-4 bg-gray-50 rounded-lg text-sm text-gray-500">
                     <p>
                         <strong>Privacy Note:</strong> All processing happens in your browser. Your files are never uploaded to any server.
