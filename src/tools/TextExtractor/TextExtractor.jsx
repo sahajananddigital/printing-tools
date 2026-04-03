@@ -108,9 +108,9 @@ const TextExtractor = () => {
     return (
         <div className="max-w-4xl mx-auto">
             <SEO
-                title="Text Extractor (OCR) - Printing Tools"
-                description="Extract text from images and PDFs using OCR. Fast, free, and runs entirely in your browser."
-                keywords="ocr, text extraction, image to text, pdf to text, tesseract, client-side"
+                title="OCR Text Extractor - Extract Text from Images & PDFs Online"
+                description="Convert images and scanned PDFs into editable text with our free OCR tool. Perfect for receipts, cheques, and documents. Fast, accurate, and runs entirely in your browser."
+                keywords="ocr online, text extractor, image to text, pdf to text, optical character recognition, scan to text, extract text from image, free ocr"
                 url="/text-extractor"
             />
 

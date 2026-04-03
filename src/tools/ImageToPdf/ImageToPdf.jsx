@@ -95,9 +95,9 @@ const ImageToPdf = () => {
     return (
         <div className="max-w-4xl mx-auto">
             <SEO
-                title="Image to PDF - Printing Tools"
-                description="Convert JS, PNG images to PDF. Fast, free, and runs entirely in your browser."
-                keywords="image to pdf, jpg to pdf, png to pdf, client-side, free pdf tools"
+                title="Image to PDF Converter - Convert JPG, PNG to PDF Online"
+                description="Easily convert multiple images (JPG, PNG, WEBP) into a single high-quality PDF document. Reorder images and create your PDF in seconds. Private and secure browser-side conversion."
+                keywords="image to pdf, jpg to pdf, png to pdf, convert photos to pdf, online image to pdf, batch image to pdf, free pdf converter"
                 url="/image-to-pdf"
             />
 

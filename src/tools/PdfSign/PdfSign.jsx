@@ -166,9 +166,9 @@ const PdfSign = () => {
     return (
         <div className="max-w-4xl mx-auto">
             <SEO
-                title="E-Sign PDF - Printing Tools"
-                description="Sign your PDF documents online for free. Draw, type, or upload your signature. Client-side secure processing."
-                keywords="sign pdf, e-sign, digital signature, free pdf signer, draw signature"
+                title="E-Sign PDF Online - Add Digital Signatures to Your Documents"
+                description="Sign PDF files securely in your browser. Draw your signature, type it with elegant fonts, or upload an image. Your documents never leave your computer."
+                keywords="e-sign pdf, sign pdf online, digital signature, electronic signature, free pdf signer, fill and sign pdf, secure digital signature"
                 url="/pdf-sign"
             />
             <div className="mb-8">

@@ -59,9 +59,9 @@ const InvoiceDuplicator = () => {
     return (
         <div className="max-w-4xl mx-auto">
             <SEO
-                title="Invoice Duplicator - Printing Tools"
-                description="Easily crop and duplicate your A4/A5 invoices onto a single A4 sheet. Save paper and printing costs with this free tool."
-                keywords="invoice cropper, pdf duplicate, a4 printing, save paper, invoice tool"
+                title="A4 Invoice Duplicator & Cropper - Print 2 Invoices on 1 Sheet"
+                description="Save paper and reduce printing costs by duplicating your A4 or A5 invoices. Crop empty space and print two copies on a single A4 page. 100% private, browser-side processing."
+                keywords="invoice duplicator, crop invoice pdf, print 2 invoices on one page, a4 to a5 invoice, save printing paper, online invoice tool, pdf cropper"
                 url="/invoice-duplicator"
             />
             <div className="mb-8">

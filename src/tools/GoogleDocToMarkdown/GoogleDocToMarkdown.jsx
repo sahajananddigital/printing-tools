@@ -127,9 +127,9 @@ const GoogleDocToMarkdown = () => {
     return (
         <div className="max-w-6xl mx-auto px-4">
             <SEO
-                title="Google Doc to Markdown - Printing Tools"
-                description="Convert Google Doc rich text to Markdown. Best for Samsung Notes."
-                keywords="google docs to markdown, samsung notes, rich text conversion"
+                title="Google Doc to Markdown Converter - Preserve Formatting for Samsung Notes"
+                description="Effortlessly convert Google Docs rich text to Markdown or HTML. Perfect for preserving bold, italics, and lists when pasting into Samsung Notes or other Markdown editors."
+                keywords="google docs to markdown, rich text to markdown, gdocs to md, samsung notes formatting, convert google doc to markdown, online markdown converter"
                 url="/google-doc-to-markdown"
             />
 

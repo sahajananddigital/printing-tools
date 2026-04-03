@@ -55,7 +55,7 @@ export async function signPdf(pdfBuffer, signatureDataUrl, options = {}) {
             sigH = uiSigHeight * scaleRatio;
             
             // Calculate X (Left origin same for both)
-            x = options.normX * width;
+            x = normX * width;
             
             // Calculate Y (PDF is Bottom-Left origin, DOM is Top-Left)
             // domY is distance from Top. 
@@ -65,7 +65,7 @@ export async function signPdf(pdfBuffer, signatureDataUrl, options = {}) {
             // Top of image on screen was at normY.
             // So Top of image in PDF is at (height - (normY * height)).
             // Bottom of image in PDF is (Top - sigH).
-            y = height - (options.normY * height) - sigH;
+            y = height - (normY * height) - sigH;
             
         } else {
             // Default Positioning (Bottom Right)

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Files, ArrowRight, Pen, Image as ImageIcon, ScanText, ClipboardPaste } from 'lucide-react';
+import { Files, ArrowRight, Pen, Image as ImageIcon, ScanText, ClipboardPaste, UserSquare } from 'lucide-react';
 
 import SEO from '../components/SEO';
 
@@ -8,9 +8,9 @@ const Home = () => {
     return (
         <div className="max-w-4xl mx-auto">
             <SEO
-                title="Home"
-                description="Free online printing tools. Crop and duplicate invoices, merge PDFs, and more. Client-side only for maximum privacy."
-                keywords="invoice duplicator, printing tools, pdf crop, a4 duplicate"
+                title="Free Online Printing Tools - Invoice Duplicator, PDF Merger & Passport Photo Maker"
+                description="Access a suite of free, private, browser-side printing tools. Duplicate invoices, create passport photos, merge and sign PDFs, extract text (OCR), and more without uploading to a server."
+                keywords="printing tools, online pdf tools, invoice duplicator, passport photo maker, pdf merger, e-sign pdf, ocr text extractor, image to pdf, google docs to markdown, private pdf tools"
             />
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Available Tools</h1>
             <p className="text-gray-600 mb-8">Select a tool to get started.</p>
@@ -30,6 +30,22 @@ const Home = () => {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Invoice Duplicator</h3>
                     <p className="text-gray-600 text-sm">
                         Take a standard A4 invoice, crop the top half, and duplicate it to the bottom half to print two copies on one sheet.
+                    </p>
+                </Link>
+
+                <Link
+                    to="/passport-photo"
+                    className="block p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all group"
+                >
+                    <div className="flex items-start justify-between mb-4">
+                        <div className="p-3 bg-red-50 rounded-lg text-red-600 group-hover:bg-red-100 transition-colors">
+                            <UserSquare className="w-6 h-6" />
+                        </div>
+                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Passport Photo Maker</h3>
+                    <p className="text-gray-600 text-sm">
+                        Create professional passport photos. Remove background, change colors, add a suit, and tile on A4 or 4x6 paper.
                     </p>
                 </Link>
 

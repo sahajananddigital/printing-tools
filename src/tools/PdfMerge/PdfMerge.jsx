@@ -67,9 +67,9 @@ const PdfMerge = () => {
     return (
         <div className="max-w-4xl mx-auto">
             <SEO
-                title="Merge PDF files - Printing Tools"
-                description="Combine multiple PDF files into one. Fast, free, and runs entirely in your browser."
-                keywords="merge pdf, combine pdf, pdf joiner, client-side, free pdf tools"
+                title="Merge PDF Files Online - Combine Multiple PDFs Fast & Securely"
+                description="Quickly combine multiple PDF documents into a single file. Reorder pages with ease. No files are uploaded; all merging happens locally in your browser for maximum security."
+                keywords="merge pdf online, combine pdf files, pdf joiner, concatenate pdf, merge documents, free pdf merger, secure pdf tools"
                 url="/pdf-merge"
             />
 
