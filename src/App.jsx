@@ -9,6 +9,7 @@ import ImageToPdf from './tools/ImageToPdf/ImageToPdf';
 import TextExtractor from './tools/TextExtractor/TextExtractor';
 import GoogleDocToMarkdown from './tools/GoogleDocToMarkdown/GoogleDocToMarkdown';
 import PassportPhoto from './tools/PassportPhoto/PassportPhoto';
+import BackgroundRemover from './tools/BackgroundRemover/BackgroundRemover';
 import Docs from './pages/Docs';
 import Contribute from './pages/Contribute';
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/pdf-sign" element={<PdfSign />} />
             <Route path="/image-to-pdf" element={<ImageToPdf />} />
             <Route path="/passport-photo" element={<PassportPhoto />} />
+            <Route path="/background-remover" element={<BackgroundRemover />} />
             <Route path="/text-extractor" element={<TextExtractor />} />
             <Route path="/docs" element={<Docs />} />
             <Route path="/contribute" element={<Contribute />} />

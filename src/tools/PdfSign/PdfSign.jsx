@@ -35,6 +35,7 @@ const PdfSign = () => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
     const [signaturePosition, setSignaturePosition] = useState({ x: 50, y: 50 });
+    const [signatureSize, setSignatureSize] = useState(64);
     const pdfWrapperRef = useRef(null);
 
     // Signature State
@@ -132,7 +133,8 @@ const PdfSign = () => {
                 normX,
                 normY,
                 renderedWidth,
-                renderedHeight
+                renderedHeight,
+                signatureSize // Pass the size here
             });
 
             const blob = new Blob([signedPdfBytes], { type: 'application/pdf' });
@@ -300,7 +302,22 @@ const PdfSign = () => {
 
                                 {/* Drag & Drop Preview Section */}
                                 <div className="p-4 bg-gray-100 border-t flex flex-col items-center">
-                                    <h3 className="text-sm font-medium text-gray-700 mb-4">
+                                    <div className="w-full max-w-md mb-6 space-y-4">
+                                        <div className="flex justify-between items-center">
+                                            <label className="text-sm font-medium text-gray-700">Signature Size</label>
+                                            <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-md">{signatureSize}px</span>
+                                        </div>
+                                        <input 
+                                            type="range" 
+                                            min="20" 
+                                            max="300" 
+                                            value={signatureSize} 
+                                            onChange={(e) => setSignatureSize(parseInt(e.target.value))}
+                                            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                                        />
+                                    </div>
+
+                                    <h3 className="text-sm font-medium text-gray-700 mb-4 text-center">
                                         Drag the signature to position it. Current Page: {pageNumber} of {numPages}
                                     </h3>
 
@@ -332,7 +349,8 @@ const PdfSign = () => {
                                                     <img
                                                         src={previewSignature}
                                                         alt="Signature"
-                                                        className="h-16 pointer-events-none"
+                                                        style={{ height: `${signatureSize}px` }}
+                                                        className="pointer-events-none"
                                                     />
                                                 </div>
                                             </Draggable>

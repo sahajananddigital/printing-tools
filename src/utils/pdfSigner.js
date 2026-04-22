@@ -44,10 +44,8 @@ export async function signPdf(pdfBuffer, signatureDataUrl, options = {}) {
             // Calculate scale ratio between real PDF and UI preview
             const scaleRatio = width / renderedWidth; // pdfWidth / domWidth
             
-            // Signature original dimensions (from PNG) - these might be huge if high-res canvas
-            // We want it to look like it did on screen (approx 64px height).
-            // Let's assume on screen it was height=64px.
-            const uiSigHeight = 64; 
+            // Use provided signatureSize or default to 64
+            const uiSigHeight = options.signatureSize || 64; 
             const aspectRatio = signatureImage.width / signatureImage.height;
             const uiSigWidth = uiSigHeight * aspectRatio;
             

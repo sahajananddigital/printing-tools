@@ -50,6 +50,22 @@ const Home = () => {
                 </Link>
 
                 <Link
+                    to="/background-remover"
+                    className="block p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all group"
+                >
+                    <div className="flex items-start justify-between mb-4">
+                        <div className="p-3 bg-indigo-50 rounded-lg text-indigo-600 group-hover:bg-indigo-100 transition-colors">
+                            <ImageIcon className="w-6 h-6" />
+                        </div>
+                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Background Remover</h3>
+                    <p className="text-gray-600 text-sm">
+                        Automatically remove backgrounds from images using AI. Features high-quality cutouts, comparison slider, edge smoothing, and custom background options.
+                    </p>
+                </Link>
+
+                <Link
                     to="/pdf-merge"
                     className="block p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all group"
                 >
